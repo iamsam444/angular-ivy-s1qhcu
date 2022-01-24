@@ -18,7 +18,7 @@ export class AppComponent implements OnInit {
 
   private getS3Bucket(): any {
     const bucket = new S3({
-      accessKeyId: 'AKIAQ546BEUDTCZ57PRA',
+      accessKeyId: '****',
       secretAccessKey: '***',
       region: 'us-east-2',
     });
