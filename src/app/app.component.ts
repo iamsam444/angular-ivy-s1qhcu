@@ -19,7 +19,7 @@ export class AppComponent implements OnInit {
   private getS3Bucket(): any {
     const bucket = new S3({
       accessKeyId: 'AKIAQ546BEUDTCZ57PRA',
-      secretAccessKey: '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',
+      secretAccessKey: '***',
       region: 'us-east-2',
     });
     return bucket;
@@ -51,16 +51,16 @@ export class AppComponent implements OnInit {
 
     var binaryData = [];
     binaryData.push(htmlObj.Body);
-    this.htmlContent = this.sanitizer.bypassSecurityTrustResourceUrl(window.URL.createObjectURL(
-      new Blob(binaryData, { type: 'text/html' })
-    ));
+    this.htmlContent = this.sanitizer.bypassSecurityTrustResourceUrl(
+      window.URL.createObjectURL(new Blob(binaryData, { type: 'text/html' }))
+    );
     console.log('this.htmlContent :: ', this.htmlContent);
     // var href = this.request.httpRequest.endpoint.href;
     // var bucketUrl = href + albumBucketName + '/';
     // var photoUrl = bucketUrl + encodeURIComponent(photoKey);
     // this.htmlContent = this.sanitizer.bypassSecurityTrustResourceUrl(
     //   'https://sambuckettest4.s3.us-east-2.amazonaws.com/files/demo1.html'
-      
+
     // );
   }
 
